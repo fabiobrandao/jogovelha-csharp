@@ -9,7 +9,7 @@ namespace JogoDaVelha
     public partial class Main : Form
     {
         private string currentPlayer;
-        private string currentWinner;
+        private string lastWinner;
         private List<Score> scores;
 
         public Main()
@@ -153,20 +153,20 @@ namespace JogoDaVelha
         {
             MessageBox.Show(player + " ganhou!!!");
 
-            Score score = scores.Where(x => x.Player == player).FirstOrDefault();
+            Score scoreByPlayer = scores.Where(x => x.Player == player).FirstOrDefault();
 
-            score.SetPoints(10 + (currentWinner == score.Player == true ? 5 : 0));
+            scoreByPlayer.SetPoints(10 + (lastWinner == scoreByPlayer.Player == true ? 5 : 0));
 
-            MessageBox.Show(string.Format("{0} foi o vencedor, total de {1} pontos\nGanhe duas seguindas e acumule +5 pontos\n\nO vencedor começa o jogo!", score.Player, score.Points));
+            MessageBox.Show(string.Format("{0} foi o vencedor, total de {1} pontos\nGanhe duas seguindas e acumule +5 pontos\n\nO vencedor começa o jogo!", scoreByPlayer.Player, scoreByPlayer.Points));
 
-            currentWinner = score.Player;
+            lastWinner = scoreByPlayer.Player;
 
-            if (score.Player == "X")
-                txbX.Text = score.Points.ToString();
+            if (scoreByPlayer.Player == "X")
+                txbX.Text = scoreByPlayer.Points.ToString();
             else
-                txbO.Text = score.Points.ToString();
+                txbO.Text = scoreByPlayer.Points.ToString();
 
-            StartGame(score.Player);
+            StartGame(scoreByPlayer.Player);
         }
 
         private void btnPlayer_Click(object sender, EventArgs e)

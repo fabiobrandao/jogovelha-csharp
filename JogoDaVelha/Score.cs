@@ -7,7 +7,7 @@
 
         public Score(string player)
         {
-            this.Player = player;
+            this.Player = player;           
         }
 
         public int SetPoints(int points)
