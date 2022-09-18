@@ -199,7 +199,7 @@ namespace JogoDaVelha
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(490, 556);
+            this.ClientSize = new System.Drawing.Size(489, 556);
             this.Controls.Add(this.txbO);
             this.Controls.Add(this.txbX);
             this.Controls.Add(this.lblO);
@@ -219,7 +219,7 @@ namespace JogoDaVelha
             this.Name = "Main";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "WinFormApp";
+            this.Text = "Jogo da Velha";
             this.ResumeLayout(false);
             this.PerformLayout();
 

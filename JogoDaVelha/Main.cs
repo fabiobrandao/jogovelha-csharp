@@ -22,26 +22,8 @@ namespace JogoDaVelha
         public void StartGame(string player)
         {
             currentPlayer = player;
-
-            btnA1.Text = "";
-            btnA2.Text = "";
-            btnA3.Text = "";
-            btnB1.Text = "";
-            btnB2.Text = "";
-            btnB3.Text = "";
-            btnC1.Text = "";
-            btnC2.Text = "";
-            btnC3.Text = "";
-
-            btnA1.BackColor = Color.White;
-            btnA2.BackColor = Color.White;
-            btnA3.BackColor = Color.White;
-            btnB1.BackColor = Color.White;
-            btnB2.BackColor = Color.White;
-            btnB3.BackColor = Color.White;
-            btnC1.BackColor = Color.White;
-            btnC2.BackColor = Color.White;
-            btnC3.BackColor = Color.White;
+            btnA1.Text = btnA2.Text = btnA3.Text = btnB1.Text = btnB2.Text = btnB3.Text = btnC1.Text = btnC2.Text = btnC3.Text = "";
+            btnA1.BackColor = btnA2.BackColor = btnA3.BackColor = btnB1.BackColor = btnB2.BackColor = btnB3.BackColor = btnC1.BackColor = btnC2.BackColor = btnC3.BackColor = Color.White;
         }
 
         public void ChangePlayer()
@@ -58,8 +40,7 @@ namespace JogoDaVelha
             scores.Add(new Score("X"));
             scores.Add(new Score("O"));
 
-            txbX.Text = "0";
-            txbO.Text = "0";
+            txbX.Text = txbO.Text = "0";
         }
 
         public bool HaveWinner(string player)
@@ -69,70 +50,48 @@ namespace JogoDaVelha
                 btnA1.BackColor = Color.Yellow;
                 btnA2.BackColor = Color.Yellow;
                 btnA3.BackColor = Color.Yellow;
-
                 return true;
             }
 
             if (btnB1.Text == player && btnB2.Text == player && btnB3.Text == player)
             {
-                btnB1.BackColor = Color.Yellow;
-                btnB2.BackColor = Color.Yellow;
-                btnB3.BackColor = Color.Yellow;
-
+                btnB1.BackColor = btnB2.BackColor = btnB3.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnC1.Text == player && btnC2.Text == player && btnC3.Text == player)
             {
-                btnC1.BackColor = Color.Yellow;
-                btnC2.BackColor = Color.Yellow;
-                btnC3.BackColor = Color.Yellow;
-
+                btnC1.BackColor = btnC2.BackColor = btnC3.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnA1.Text == player && btnB1.Text == player && btnC1.Text == player)
             {
-                btnA1.BackColor = Color.Yellow;
-                btnB1.BackColor = Color.Yellow;
-                btnC1.BackColor = Color.Yellow;
-
+                btnA1.BackColor = btnB1.BackColor = btnC1.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnA2.Text == player && btnB2.Text == player && btnC2.Text == player)
             {
-                btnA2.BackColor = Color.Yellow;
-                btnB2.BackColor = Color.Yellow;
-                btnC2.BackColor = Color.Yellow;
-
+                btnA2.BackColor = btnB2.BackColor = btnC2.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnA3.Text == player && btnB3.Text == player && btnC3.Text == player)
             {
-                btnA3.BackColor = Color.Yellow;
-                btnB3.BackColor = Color.Yellow;
-                btnC3.BackColor = Color.Yellow;
-
+                btnA3.BackColor = btnB3.BackColor = btnC3.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnA1.Text == player && btnB2.Text == player && btnC3.Text == player)
             {
-                btnA1.BackColor = Color.Yellow;
-                btnB2.BackColor = Color.Yellow;
-                btnC3.BackColor = Color.Yellow;
-
+                btnA1.BackColor = btnB2.BackColor = btnC3.BackColor = Color.Yellow;
                 return true;
             }
 
             if (btnA3.Text == player && btnB2.Text == player && btnC1.Text == player)
             {
-                btnA3.BackColor = Color.Yellow;
-                btnB2.BackColor = Color.Yellow;
-                btnC1.BackColor = Color.Yellow;
-
+                btnA3.BackColor = btnB2.BackColor = btnC1.BackColor = Color.Yellow;
                 return true;
             }
 
